@@ -8,7 +8,7 @@ namespace ShootingDice
     {
         static void Main(string[] args)
         {
-            Player player1 = new Player();
+            SmackTalkingPlayer player1 = new SmackTalkingPlayer();
             player1.Name = "Bob";
 
             Player player2 = new Player();
@@ -32,8 +32,12 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
-            List<Player> players = new List<Player>() {
-                player1, player2, player3, large
+            List<Player> players = new List<Player>()
+            {
+                player1,
+                player2,
+                player3,
+                large
             };
 
             PlayMany(players);
@@ -62,7 +66,7 @@ namespace ShootingDice
             {
                 Console.WriteLine("-------------------");
 
-                // Make adjacent players play noe another
+                // Make adjacent players play now another
                 Player player1 = shuffledPlayers[i];
                 Player player2 = shuffledPlayers[i + 1];
                 player1.Play(player2);
