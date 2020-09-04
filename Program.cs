@@ -9,26 +9,53 @@ namespace ShootingDice
         static void Main(string[] args)
         {
             SmackTalkingPlayer player1 = new SmackTalkingPlayer();
-            player1.Name = "Bob";
+            player1.Name = "Caitlin";
 
             OneHigherPlayer player2 = new OneHigherPlayer();
-            player2.Name = "Sue";
+            player2.Name = "Joe";
 
             player2.Play(player1);
 
             Console.WriteLine("-------------------");
 
             HumanPlayer player3 = new HumanPlayer();
-            player3.Name = "Wilma";
+            player3.Name = "Barry";
 
             player3.Play(player2);
 
             Console.WriteLine("-------------------");
 
             CreativeSmackTalkingPlayer player4 = new CreativeSmackTalkingPlayer();
-            player4.Name = "Tasha";
+            player4.Name = "Cisco";
 
             player4.Play(player3);
+
+            Console.WriteLine("-------------------");
+
+            SoreLoserPlayer player5 = new SoreLoserPlayer();
+            player5.Name = "Henry";
+            try
+            {
+                player5.Play(player4);
+            }
+            catch
+            {
+                Console.Write(" you cheated");
+            }
+
+            Console.WriteLine("-------------------");
+
+            UpperHalfPlayer player6 = new UpperHalfPlayer();
+            player6.Name = "Iris";
+
+            player6.Play(player5);
+
+            Console.WriteLine("-------------------");
+
+            SoreLoserUpperHalfPlayer player7 = new SoreLoserUpperHalfPlayer();
+            player7.Name = "Cecile";
+
+            player7.Play(player6);
 
             Console.WriteLine("-------------------");
 
@@ -45,6 +72,9 @@ namespace ShootingDice
                 player2,
                 player3,
                 player4,
+                player5,
+                player6,
+                player7,
                 large
             };
 
@@ -77,7 +107,15 @@ namespace ShootingDice
                 // Make adjacent players play now another
                 Player player1 = shuffledPlayers[i];
                 Player player2 = shuffledPlayers[i + 1];
-                player1.Play(player2);
+                try
+                {
+                    player1.Play(player2);
+                }
+                catch
+                {
+                    Console.Write(" you cheated");
+                }
+
             }
         }
     }

@@ -6,15 +6,17 @@ namespace ShootingDice
     public class CreativeSmackTalkingPlayer : Player
 
     {
+        // this is a list of taunts 
         List<String> SmackTalk = new List<String>
         {
-            "Kiss My Biscuits",
-            "booyea",
-            "I got this"
+            "Vibe",
+            "Ok whatever you say",
+            "Well you won because your fast"
         };
 
         public override void Play(Player other)
         {
+            // This is looking at the list then picking at Random which taunt to use. 
             int SmackTalkSaying = new Random().Next(0, SmackTalk.Count);
             // Call roll for "this" object and for the "other" object
             int myRoll = Roll();

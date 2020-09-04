@@ -11,6 +11,7 @@ namespace ShootingDice
         {
             // Call roll for "this" object and for the "other" object
             int otherRoll = other.Roll();
+            // my roll = the other roll plus one so its always higher than the other player
             int myRoll = otherRoll + 1;
 
             Console.WriteLine($"{Name} rolls a {myRoll}");
