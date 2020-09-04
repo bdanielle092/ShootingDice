@@ -8,5 +8,12 @@ namespace ShootingDice
     public class UpperHalfPlayer : Player
     {
 
+        public override int Roll()
+        {
+
+            // Return a random number between 1 and DiceSize
+            // the player cannot roll lower than a 4. Its the minimum number 
+            return new Random().Next(4, DiceSize) + 1;
+        }
     }
 }

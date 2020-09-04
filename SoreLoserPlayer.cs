@@ -23,6 +23,7 @@ namespace ShootingDice
                 Console.WriteLine($"{Name} Wins!");
             }
             else if (myRoll < otherRoll)
+            // here we throw an Exception
             {
 
                 throw new Exception($"{Name} yells - You cheated!");

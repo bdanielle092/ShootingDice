@@ -34,13 +34,14 @@ namespace ShootingDice
 
             SoreLoserPlayer player5 = new SoreLoserPlayer();
             player5.Name = "Henry";
+            // this is the try/catch to catch the Exception 
             try
             {
                 player5.Play(player4);
             }
             catch
             {
-                Console.Write(" you cheated");
+                Console.Write("you cheated");
             }
 
             Console.WriteLine("-------------------");
@@ -54,8 +55,15 @@ namespace ShootingDice
 
             SoreLoserUpperHalfPlayer player7 = new SoreLoserUpperHalfPlayer();
             player7.Name = "Cecile";
-
-            player7.Play(player6);
+            // this is the try/catch to catch the Exception
+            try
+            {
+                player7.Play(player6);
+            }
+            catch
+            {
+                Console.Write("You cheated");
+            }
 
             Console.WriteLine("-------------------");
 
@@ -107,13 +115,14 @@ namespace ShootingDice
                 // Make adjacent players play now another
                 Player player1 = shuffledPlayers[i];
                 Player player2 = shuffledPlayers[i + 1];
+                // this is the try/catch to catch the Exception
                 try
                 {
                     player1.Play(player2);
                 }
                 catch
                 {
-                    Console.Write(" you cheated");
+                    Console.Write("you cheated");
                 }
 
             }
