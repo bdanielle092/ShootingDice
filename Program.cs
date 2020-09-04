@@ -28,6 +28,8 @@ namespace ShootingDice
             CreativeSmackTalkingPlayer player4 = new CreativeSmackTalkingPlayer();
             player4.Name = "Tasha";
 
+            player4.Play(player3);
+
             Console.WriteLine("-------------------");
 
             Player large = new LargeDicePlayer();
