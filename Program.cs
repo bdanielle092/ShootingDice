@@ -62,7 +62,7 @@ namespace ShootingDice
             }
             catch
             {
-                Console.Write("You cheated");
+                Console.Write("You read my mind");
             }
 
             Console.WriteLine("-------------------");
@@ -122,7 +122,7 @@ namespace ShootingDice
                 }
                 catch
                 {
-                    Console.Write("you cheated");
+                    Console.Write("Hey you cheated");
                 }
 
             }
